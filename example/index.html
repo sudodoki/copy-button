@@ -6,7 +6,9 @@
   <script src='../bundled.min.js'></script>
 </head>
 <body>
+  
   <div class="container">
+  <h2 id="basic-target-text">Basic text copy</h2>
   <textarea disabled class='code half'>
 <copy-button target-text='Hello this is Patrick'></copy-button>
 <copy-button target-text='Hello this is Patrick'>Click to copy 'Hello this is Patrick' to clipboard</copy-button>
@@ -18,6 +20,7 @@
   </div>
   <hr class="reset">
   <div class="container">
+  <h2 id="copying-content-of-div">Copying content of another element using selector</h2>
   <textarea disabled class="code half">
 <div class="js-target">This is js-target content</div>
 <copy-button target-element='.js-target'></copy-button>
@@ -29,6 +32,7 @@
   </div>
   <hr class="reset">
   <div class="container">
+  <h2 id="using-DOM-with-values">Copying value of textarea</h2>
   <code class='code half'>
 &lt;textarea name=&quot;LOL&quot; id=&quot;textarea&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt;Write something here&lt;/textarea&gt;
 &lt;copy-button target-element='#textarea'&gt;&lt;/copy-button&gt;    
@@ -40,6 +44,7 @@
   </div>
   <hr class="reset">
   <div class="container">
+  <h2 id="copying-value-of-input">Copying value of input</h2>
   <textarea disabled class="code half">
 <input type="text" id="textcopy" value='Fuck this shit'/>
 <copy-button target-element='#textcopy'></copy-button>
@@ -51,6 +56,7 @@
   </div>
   <hr class="reset">
   <div class="container">
+  <h2 id="using-custom-markup">Adding icons</h2>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <textarea disabled class="code half">
 <input type="text" value='some url' class='js-url-input'>
