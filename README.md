@@ -1,4 +1,4 @@
-# <copy-button></copy-button>
+# `<copy-button></copy-button>`
 
 A web-component that is not relying on Flash to copy stuff into the clipboard. Experience may vary, based on browser support, with downgrading to using [prompt](http://stackoverflow.com/a/6055620/1976857).
 
