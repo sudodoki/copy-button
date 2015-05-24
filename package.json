@@ -1,17 +1,28 @@
 {
   "name": "copy-button",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Web component to copy target text/dom-node value to clipboard",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run build && exit-on-dirty-git",
+    "build": "browserify index.js -o bundled.js && uglifyjs bundled.js -o bundled.min.js"
   },
-  "keywords": [],
-  "author": "sudodoki <smd.deluzion@gmail.com> (sudodoki.name)",
+  "keywords": [
+    "clipboard",
+    "copy",
+    "browser"
+  ],
+  "author": "sudodoki <smd.deluzion@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "copy-to-clipboard": "0.0.0",
+    "copy-to-clipboard": "^1.0.0",
     "document-register-element": "^0.3.0",
     "webcomponents.js": "^0.6.1"
+  },
+  "devDependencies": {
+    "browserify": "^10.2.1",
+    "uglify-js": "^2.4.23",
+    "exit-on-dirty-git": "^1.0.0"
   }
 }
