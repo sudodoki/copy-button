@@ -23,5 +23,11 @@
     "browserify": "^10.2.1",
     "uglify-js": "^2.4.23",
     "exit-on-dirty-git": "^1.0.0"
-  }
+  },
+  "contributors": [
+    {
+      "name": "Aleksej Shvajka",
+      "url": "https://github.com/shvaikalesh"
+    }
+  ]
 }
