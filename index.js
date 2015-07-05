@@ -9,7 +9,7 @@ function handleCopyClick (e) {
   }
   if (toCopy = this.getAttribute('target-element')) {
     toCopyEl = document.querySelector(toCopy);
-    return copy(toCopyEl.value || toCopyEl.textContent || toCopyEl.innerText);
+    return copy(toCopyEl.value || toCopyEl.textContent || toCopyEl.innerText || '');
   }
 }
 
