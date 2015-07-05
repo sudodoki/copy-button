@@ -2,7 +2,7 @@ require('document-register-element');
 var copy = require('copy-to-clipboard');
 var CopyButtonPrototype = Object.create(HTMLButtonElement.prototype);
 
-function handleCopyClick (e) {
+function handleCopyClick(e) {
   var toCopy, toCopyEl;
   if (toCopy = this.getAttribute('target-text')) {
     return copy(toCopy);
@@ -14,7 +14,7 @@ function handleCopyClick (e) {
 }
 
 CopyButtonPrototype.createdCallback = function() {
-  var button = document.createElement("button");
+  var button = document.createElement('button');
   if (this.childNodes.length) {
     var node;
     while (node = this.firstChild) {
