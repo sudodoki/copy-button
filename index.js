@@ -16,9 +16,9 @@ function handleCopyClick (e) {
 CopyButtonPrototype.createdCallback = function() {
   var button = document.createElement("button");
   if (this.childNodes.length) {
-    var allNodesLength = this.childNodes.length;
-    for (var i=0; i<allNodesLength; i++) {
-      button.appendChild(this.childNodes[0]);
+    var node;
+    while (node = this.firstChild) {
+      button.appendChild(node);
     }
   } else {
     button.appendChild(document.createTextNode('Click to copy to clipboard'));
