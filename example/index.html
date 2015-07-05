@@ -1,71 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
   <title>CopyButtonPlayground</title>
   <link rel="stylesheet" href="example.css">
-  <script src='../bundled.min.js'></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script src="../bundled.min.js"></script>
 </head>
 <body>
   <h1><a href="http://github.com/sudodoki/copy-button">copy-button Repo</a></h1>
   <div class="container">
-  <h2 id="basic-target-text">Basic text copy</h2>
-  <textarea disabled class='code half'>
-<copy-button target-text='Hello this is Patrick'></copy-button>
-<copy-button target-text='Hello this is Patrick'>Click to copy 'Hello this is Patrick' to clipboard</copy-button>
-  </textarea>
-  <div class="half">
-    <copy-button target-text='Hello this is Patrick'></copy-button>
-    <copy-button target-text='Hello this is Patrick'>Click to copy 'Hello this is Patrick' to clipboard</copy-button>
+    <h2 id="basic-target-text">Basic text copy</h2>
+    <textarea disabled class="code half">
+      <copy-button target-text="Hello this is Patrick"></copy-button>
+      <copy-button target-text="Hello this is Patrick">Click to copy 'Hello this is Patrick' to clipboard</copy-button>
+    </textarea>
+    <div class="half">
+      <copy-button target-text="Hello this is Patrick"></copy-button>
+      <copy-button target-text="Hello this is Patrick">Click to copy 'Hello this is Patrick' to clipboard</copy-button>
+    </div>
   </div>
-  </div>
-  <hr class="reset">
+  <hr>
   <div class="container">
-  <h2 id="copying-content-of-div">Copying content of another element using selector</h2>
-  <textarea disabled class="code half">
-<div class="js-target">This is js-target content</div>
-<copy-button target-element='.js-target'></copy-button>
-  </textarea>
-  <div class="half">
-  <div class="js-target">This is js-target content</div>
-  <copy-button target-element='.js-target'></copy-button>
+    <h2 id="copying-content-of-div">Copying content of another element using selector</h2>
+    <textarea disabled class="code half">
+      <div class="js-target">This is js-target content</div>
+      <copy-button target-element=".js-target"></copy-button>
+    </textarea>
+    <div class="half">
+      <div class="js-target">This is js-target content</div>
+      <copy-button target-element=".js-target"></copy-button>
+    </div>
   </div>
-  </div>
-  <hr class="reset">
+  <hr>
   <div class="container">
-  <h2 id="using-DOM-with-values">Copying value of textarea</h2>
-  <code class='code half'>
-&lt;textarea name=&quot;LOL&quot; id=&quot;textarea&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt;Write something here&lt;/textarea&gt;
-&lt;copy-button target-element='#textarea'&gt;&lt;/copy-button&gt;    
-</code>
-  <div class="half">
-    <textarea name="LOL" id="textarea" cols="30" rows="10">Write something here</textarea>
-    <copy-button target-element='#textarea'></copy-button>
+    <h2 id="using-DOM-with-values">Copying value of textarea</h2>
+    <code class="code half">
+      &lt;textarea name=&quot;LOL&quot; id=&quot;textarea&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt;Write something here&lt;/textarea&gt;
+      &lt;copy-button target-element="#textarea"&gt;&lt;/copy-button&gt;
+    </code>
+    <div class="half">
+      <textarea name="LOL" id="textarea" cols="30" rows="10">Write something here</textarea>
+      <copy-button target-element="#textarea"></copy-button>
+    </div>
   </div>
-  </div>
-  <hr class="reset">
+  <hr>
   <div class="container">
-  <h2 id="copying-value-of-input">Copying value of input</h2>
-  <textarea disabled class="code half">
-<input type="text" id="textcopy" value='Fuck this shit'/>
-<copy-button target-element='#textcopy'></copy-button>
-  </textarea>
-  <div class="half">
-    <input type="text" id="textcopy" value='Fluf this sheet'/>
-    <copy-button target-element='#textcopy'></copy-button>
+    <h2 id="copying-value-of-input">Copying value of input</h2>
+    <textarea disabled class="code half">
+      <input type="text" id="textcopy" value="Fuck this shit">
+      <copy-button target-element="#textcopy"></copy-button>
+    </textarea>
+    <div class="half">
+      <input type="text" id="textcopy" value="Fluf this sheet">
+      <copy-button target-element="#textcopy"></copy-button>
+    </div>
   </div>
-  </div>
-  <hr class="reset">
+  <hr>
   <div class="container">
-  <h2 id="using-custom-markup">Adding icons</h2>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <textarea disabled class="code half">
-<input type="text" value='some url' class='js-url-input'>
-<copy-button target-element='.js-url-input'><i class="fa fa-download"></i></copy-button>
-  </textarea>
-  <div class="half">
-  <input type="text" value='some url' class='js-url-input'>
-  <copy-button target-element='.js-url-input'><i class="fa fa-download"></i></copy-button>
-  </div>
+    <h2 id="using-custom-markup">Adding icons</h2>
+    <textarea disabled class="code half">
+      <input type="text" value="some url" class="js-url-input">
+      <copy-button target-element=".js-url-input"><i class="fa fa-download"></i></copy-button>
+    </textarea>
+    <div class="half">
+      <input type="text" value="some url" class="js-url-input">
+      <copy-button target-element=".js-url-input"><i class="fa fa-download"></i></copy-button>
+    </div>
   </div>
 </body>
 </html>

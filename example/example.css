@@ -1,7 +1,7 @@
 html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, dl,
-dt, dd, blockquote, address{
-    margin: 0;
-    padding: 0;
+dt, dd, blockquote, address {
+  margin: 0;
+  padding: 0;
 }
 
 * {
@@ -29,15 +29,7 @@ dt, dd, blockquote, address{
   float: left;
   padding: 10px;
 }
-
-.reset {
-  float: none;
-}
-hr {
-  width: 100%;
-}
-
-.code { 
+.code {
   font-size: 18px;
   min-height: 150px;
 }
