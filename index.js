@@ -8,11 +8,7 @@ function handleCopyClick (e) {
     return copy(toCopy);
   }
   if (toCopy = this.getAttribute('target-element')) {
-    if (toCopy.charAt(0) === '#') {
-      toCopyEl = document.getElementById(toCopy.slice(1));
-    } else {
-      toCopyEl = document.querySelectorAll(toCopy)[0];
-    }
+    toCopyEl = document.querySelectorAll(toCopy)[0];
     return copy(toCopyEl.value || toCopyEl.innerText || toCopyEl.textContent);
   }
 }
