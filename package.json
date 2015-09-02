@@ -1,6 +1,6 @@
 {
   "name": "copy-button",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Web component to copy target text/dom-node value to clipboard",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   "author": "sudodoki <smd.deluzion@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "copy-to-clipboard": "^1.0.2",
+    "copy-to-clipboard": "^1.0.4",
     "document-register-element": "^0.3.0"
   },
   "devDependencies": {
