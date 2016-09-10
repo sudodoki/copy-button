@@ -14,6 +14,11 @@ function handleCopyClick() {
 }
 
 CopyButtonPrototype.createdCallback = function() {
+  this.wrappedInButton = false;
+};
+
+CopyButtonPrototype.attachedCallback = function() {
+  if (this.wrappedInButton) return;
   var button = document.createElement('button');
   if (this.childNodes.length) {
     var node;
@@ -25,6 +30,7 @@ CopyButtonPrototype.createdCallback = function() {
   }
   this.appendChild(button);
   this.addEventListener('click', handleCopyClick);
+  this.wrappedInButton = true;
 };
 
 var CopyButton = document.registerElement('copy-button', {
