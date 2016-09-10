@@ -33,6 +33,6 @@ CopyButtonPrototype.attachedCallback = function() {
   this.wrappedInButton = true;
 };
 
-var CopyButton = document.registerElement('copy-button', {
+module.exports = document.registerElement('copy-button', {
   prototype: CopyButtonPrototype,
 });
