@@ -3,7 +3,8 @@ require('document-register-element');
 var copy = require('copy-to-clipboard');
 var CopyButtonPrototype = Object.create(HTMLButtonElement.prototype);
 
-function handleCopyClick() {
+function handleCopyClick(event) {
+  if (event.defaultPrevented) return;
   if (this.hasAttribute('target-text')) {
     return copy(this.getAttribute('target-text'));
   }
