@@ -1,3 +1,4 @@
+'use strict';
 require('document-register-element');
 var copy = require('copy-to-clipboard');
 var CopyButtonPrototype = Object.create(HTMLButtonElement.prototype);
