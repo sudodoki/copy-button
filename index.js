@@ -3,14 +3,13 @@ require('document-register-element');
 var copy = require('copy-to-clipboard');
 var CopyButtonPrototype = Object.create(HTMLButtonElement.prototype);
 
-function handleCopyClick(e) {
-  var toCopy, toCopyEl;
-  if (toCopy = this.getAttribute('target-text')) {
-    return copy(toCopy);
+function handleCopyClick() {
+  if (this.hasAttribute('target-text')) {
+    return copy(this.getAttribute('target-text'));
   }
-  if (toCopy = this.getAttribute('target-element')) {
-    toCopyEl = document.querySelector(toCopy);
     return copy(toCopyEl.value || toCopyEl.textContent || toCopyEl.innerText || '');
+  if (this.hasAttribute('target-element')) {
+    var toCopyEl = document.querySelector(this.getAttribute('target-element'));
   }
 }
 
