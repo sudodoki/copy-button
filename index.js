@@ -7,9 +7,9 @@ function handleCopyClick() {
   if (this.hasAttribute('target-text')) {
     return copy(this.getAttribute('target-text'));
   }
-    return copy(toCopyEl.value || toCopyEl.textContent || toCopyEl.innerText || '');
   if (this.hasAttribute('target-element')) {
     var toCopyEl = document.querySelector(this.getAttribute('target-element'));
+    return copy(toCopyEl.value || toCopyEl.textContent || '');
   }
 }
 
@@ -21,10 +21,10 @@ CopyButtonPrototype.createdCallback = function() {
       button.appendChild(node);
     }
   } else {
-    button.appendChild(document.createTextNode('Click to copy to clipboard'));
+    button.textContent = 'Click to copy to clipboard';
   }
   this.appendChild(button);
-  this.onclick = handleCopyClick;
+  this.addEventListener('click', handleCopyClick);
 };
 
 var CopyButton = document.registerElement('copy-button', {
