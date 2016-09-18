@@ -1,6 +1,6 @@
 {
   "name": "copy-button",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "Web component to copy target text/dom-node value to clipboard",
   "main": "index.js",
   "scripts": {
