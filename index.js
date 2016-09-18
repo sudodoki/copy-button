@@ -1,19 +1,25 @@
+'use strict';
 require('document-register-element');
 var copy = require('copy-to-clipboard');
 var CopyButtonPrototype = Object.create(HTMLButtonElement.prototype);
 
-function handleCopyClick(e) {
-  var toCopy, toCopyEl;
-  if (toCopy = this.getAttribute('target-text')) {
-    return copy(toCopy);
+function handleCopyClick(event) {
+  if (event.defaultPrevented) return;
+  if (this.hasAttribute('target-text')) {
+    return copy(this.getAttribute('target-text'));
   }
-  if (toCopy = this.getAttribute('target-element')) {
-    toCopyEl = document.querySelector(toCopy);
-    return copy(toCopyEl.value || toCopyEl.textContent || toCopyEl.innerText || '');
+  if (this.hasAttribute('target-element')) {
+    var toCopyEl = document.querySelector(this.getAttribute('target-element'));
+    return copy(toCopyEl.value || toCopyEl.textContent || '');
   }
 }
 
 CopyButtonPrototype.createdCallback = function() {
+  this.wrappedInButton = false;
+};
+
+CopyButtonPrototype.attachedCallback = function() {
+  if (this.wrappedInButton) return;
   var button = document.createElement('button');
   if (this.childNodes.length) {
     var node;
@@ -21,12 +27,13 @@ CopyButtonPrototype.createdCallback = function() {
       button.appendChild(node);
     }
   } else {
-    button.appendChild(document.createTextNode('Click to copy to clipboard'));
+    button.textContent = 'Click to copy to clipboard';
   }
   this.appendChild(button);
-  this.onclick = handleCopyClick;
+  this.addEventListener('click', handleCopyClick);
+  this.wrappedInButton = true;
 };
 
-var CopyButton = document.registerElement('copy-button', {
+module.exports = document.registerElement('copy-button', {
   prototype: CopyButtonPrototype,
 });
