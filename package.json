@@ -16,7 +16,7 @@
   "author": "sudodoki <smd.deluzion@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "copy-to-clipboard": "^1.0.4",
+    "copy-to-clipboard": "^3.0.5",
     "document-register-element": "^1.1.1"
   },
   "devDependencies": {
