@@ -17,7 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "copy-to-clipboard": "^1.0.4",
-    "document-register-element": "^0.3.0"
+    "document-register-element": "^1.1.1"
   },
   "devDependencies": {
     "browserify": "^10.2.4",
