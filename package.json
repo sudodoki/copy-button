@@ -8,6 +8,10 @@
     "prepublish": "npm run build && exit-on-dirty-git",
     "build": "browserify index.js -o bundled.js && uglifyjs bundled.js -o bundled.min.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sudodoki/copy-button.git"
+  },
   "keywords": [
     "clipboard",
     "copy",
